@@ -1,0 +1,11 @@
+@use "../abstract" as *;
+
+.hero {
+    .slide {
+        max-height: 72rem;
+        
+        &:not(.selected) {
+            opacity: 0.4;
+        }
+    }
+}

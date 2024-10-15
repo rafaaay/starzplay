@@ -1,6 +1,6 @@
-
 import Footer from "./components/layout/footer/Footer";
 import Header from "./components/layout/header/Header";
+import Hero from "./components/layout/hero/Hero";
 import "./styles/style.scss";
 
 function App() {
@@ -9,7 +9,9 @@ function App() {
     <>
       <Header></Header>
 
-      <main></main>
+      <main>
+        <Hero></Hero>
+      </main>
 
       <Footer></Footer>
     </>

@@ -1,0 +1,80 @@
+@use "../abstract" as *;
+
+.header {
+    --text-clr: rgba(var(--clr-white), 0.7);
+    
+    @extend .flex-center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding: 2rem;
+
+    &__links {
+        @extend .flex-center;
+        gap: 4em;
+    }
+
+    .logo a {
+        color: var(--text-clr);
+
+        span {
+            color: rgba(var(--clr-white), 1);
+            font-weight: 600;
+        }
+    }
+
+    .nav {
+        @extend .flex-center;
+        gap: 3em;
+
+        &__link {
+            color: var(--text-clr);
+            position: relative;
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 3rem;
+                height: 2px;
+                background-color: var(--clr-orange);
+                position: absolute;
+                left: 50%;
+                bottom: -4px;
+                transform: translateX(-50%);
+                opacity: 0;
+                transition: opacity 0.3s ease-in;
+            }
+        }
+
+        &__link:hover, &__link.active {
+            &::after {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__controls {
+        @extend .flex-center;
+        gap: 2em;
+    }
+
+    &__search {
+        --radius: 2rem;
+
+        background-color: rgba(var(--clr-white), 0.2);
+        border-radius: var(--radius);
+
+        button {
+            padding: 0.5em;
+            opacity: 0.6;
+        }
+    }
+
+    &__options {
+
+        button {
+            @extend .flex-center;
+            gap: 1rem;
+            opacity: 0.6;
+        }
+    }
+}

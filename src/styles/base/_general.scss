@@ -3,3 +3,11 @@
 html {
     font-size: 62.5%;
 }
+
+body {
+    background-color: var(--clr-black);
+}
+
+button {
+    @extend .flex-center;
+}
