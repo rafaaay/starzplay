@@ -20,7 +20,7 @@ function Header() {
             <div className="header__controls">
                 <div className="header__search">
                     <button aria-label="search" aria-disabled="false" aria-pressed="false">
-                        <img src={'/public/icons/icon_search.svg'} />
+                        <img src={'/static/icons/icon_search.svg'} />
                     </button>
 
                     <div className="results"></div>
@@ -28,8 +28,8 @@ function Header() {
 
                 <div className="header__options">
                     <button aria-label="options" aria-disabled="false" aria-pressed="false">
-                        <img src={'/public/icons/icon_settings.svg'} />
-                        <img src={'/public/icons/icon_caret-down.svg'} />
+                        <img src={'/static/icons/icon_settings.svg'} />
+                        <img src={'/static/icons/icon_caret-down.svg'} />
                     </button>
                 </div>
             </div>

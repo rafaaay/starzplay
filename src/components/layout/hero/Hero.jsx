@@ -14,13 +14,13 @@ function Hero() {
                 showThumbs={false}
                 transitionTime={300}
             >
-                <img src="/public/images/img_banner-1.jpg" />
+                <img src="/static/images/img_banner-1.jpg" />
 
-                <img src="/public/images/img_banner-1.jpg" />
+                <img src="/static/images/img_banner-1.jpg" />
 
-                <img src="/public/images/img_banner-1.jpg" />
+                <img src="/static/images/img_banner-1.jpg" />
 
-                <img src="/public/images/img_banner-1.jpg" />
+                <img src="/static/images/img_banner-1.jpg" />
 
             </Carousel>
         </section>
