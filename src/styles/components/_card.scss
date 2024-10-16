@@ -4,9 +4,30 @@
     width: 16vw;
     height: 30rem;
     flex-shrink: 0;
+    cursor: pointer;
+    position: relative;
+
+    figcaption, img {
+        transition: opacity 0.3s ease-in;
+    }
+
+    &:hover {
+        img {
+            opacity: 0.3;
+        }
+
+        figcaption {
+            opacity: 1;
+        }
+    }
 
     figcaption {
-        display: none;
+        position: absolute;
+        bottom: 0;
+        padding: 1em;
+        font-size: var(--fs-500);
+        white-space: normal;
+        opacity: 0;
     }
 
     img {
