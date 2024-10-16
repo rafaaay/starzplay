@@ -1,21 +1,16 @@
 import Card from "../../atoms/card/card"
 
-function Slider() {
+function Slider( {module} ) {
     return (
         <section className="slider">
             <div className="slider__header">
-                <h2>Category Name</h2>
+                <h2>{module.title}</h2>
             </div>
 
             <div className="slider__body">
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                {module.layoutTitles.titles.map((title) => (
+                    <Card key={title.titleId} title={title} />
+                ))}
             </div>
         </section>
     )

@@ -1,8 +1,12 @@
-function Card() {
+function Card( {title} ) {
+
+    const { title: titleName, description, year, tags, thumbnails } = title;
+    const thumbnail = thumbnails?.['thumb-614x1536']?.url || '';
+
     return (
         <figure className="card">
-            <img src="/static/images/img_banner-1.jpg" alt="Elephant at sunset" />
-            <figcaption>Title</figcaption>
+            <img src={thumbnail} alt={titleName} />
+            <figcaption>{titleName}</figcaption>
         </figure>
     )
 }

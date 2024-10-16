@@ -1,7 +1,7 @@
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-function Hero() {
+function Hero({ banners }) {
     return (
         <section className="hero">
             <Carousel 
@@ -14,14 +14,14 @@ function Hero() {
                 showThumbs={false}
                 transitionTime={300}
             >
-                <img src="/static/images/img_banner-1.jpg" />
+                {banners.map(banner => {
+                    const { title, description, year, thumbnails } = banner;
+                    const thumbnail = thumbnails?.['thumb-614x1536']?.url || '';
 
-                <img src="/static/images/img_banner-1.jpg" />
-
-                <img src="/static/images/img_banner-1.jpg" />
-
-                <img src="/static/images/img_banner-1.jpg" />
-
+                    return(
+                        <img src={thumbnail} />
+                    )
+                })}
             </Carousel>
         </section>
     )
