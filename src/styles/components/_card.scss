@@ -1,0 +1,17 @@
+@use "../abstract" as *;
+
+.card {
+    width: 16vw;
+    height: 30rem;
+    flex-shrink: 0;
+
+    figcaption {
+        display: none;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

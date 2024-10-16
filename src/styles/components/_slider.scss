@@ -1,0 +1,25 @@
+@use "../abstract" as *;
+
+.slider, .load-btn {
+    padding: 6rem 4rem 0 4rem;
+}
+
+.slider {
+    color: rgba(var(--clr-white));
+    
+    &__header {
+        margin-bottom: 1.6rem;
+    }
+
+    &__body {
+        display: flex;
+        gap: 1vw;
+        white-space: nowrap;
+        overflow: auto;
+        @extend .no-scrollbar;
+    }
+}
+
+.load-btn {
+    @extend .flex-center;
+}

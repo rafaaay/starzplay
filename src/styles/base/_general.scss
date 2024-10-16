@@ -8,6 +8,13 @@ body {
     background-color: var(--clr-black);
 }
 
-button {
+button, .btn {
     @extend .flex-center;
+}
+
+.btn {
+    padding: 1em 3em;
+    background-color: var(--clr-orange);
+    color: rgba(var(--clr-white), 1.0);
+    font-weight: 500;
 }

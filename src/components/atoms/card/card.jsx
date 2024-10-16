@@ -1,8 +1,9 @@
 function Card() {
     return (
-        <article className="card">
-            <h1>Footer</h1>
-        </article>
+        <figure className="card">
+            <img src="/public/images/img_banner-1.jpg" alt="Elephant at sunset" />
+            <figcaption>Title</figcaption>
+        </figure>
     )
 }
 
