@@ -7,5 +7,29 @@
         &:not(.selected) {
             opacity: 0.4;
         }
+
+        &.selected:hover {
+            figcaption {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__item {
+        position: relative;
+        cursor: pointer;
+
+        figcaption {
+            position: absolute;
+            bottom: 0;
+            padding: 1em;
+            font-size: var(--fs-500);
+            white-space: normal;
+            opacity: 0;
+            transition: all .3s ease-in;
+            width: 100%;
+            background-color: rgba(#000, 0.7);
+            vertical-align: middle;
+        }
     }
 }

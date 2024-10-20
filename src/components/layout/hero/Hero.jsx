@@ -19,7 +19,10 @@ function Hero({ banners }) {
                     const thumbnail = thumbnails?.['thumb-614x1536']?.url || '';
 
                     return(
-                        <img src={thumbnail} />
+                        <figure className='hero__item'>
+                            <img src={thumbnail} />
+                            <figcaption>{title}</figcaption>
+                        </figure>
                     )
                 })}
             </Carousel>
