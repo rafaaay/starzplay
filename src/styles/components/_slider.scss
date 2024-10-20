@@ -1,7 +1,7 @@
 @use "../abstract" as *;
 
 .slider, .load-btn {
-    --padding-x: 4rem;
+    --padding-x: 6rem;
     padding: 6rem var(--padding-x) 0 var(--padding-x);
 }
 
@@ -20,7 +20,7 @@
         }
 
         &--left {
-            left: calc(-1 * var(--padding-x));
+            left: calc(-1 * (var(--padding-x)));
         }
 
         &--right {

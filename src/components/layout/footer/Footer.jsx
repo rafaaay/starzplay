@@ -22,7 +22,12 @@ function Footer() {
             {/* Copyright */}
 
             {/* Social Links */}
-            <div className="footer__social-links"></div>
+            <div className="footer__social-links">
+                <a><img src={'/static/icons/icon_facebook.svg'} alt="facebook" /></a>
+                <a><img src={'/static/icons/icon_twitter.svg'} alt="twitter" /></a>
+                <a><img src={'/static/icons/icon_instagram.svg'} alt="instagram" /></a>
+                <a><img src={'/static/icons/icon_youtube.svg'} alt="youtube" /></a>
+            </div>
             {/* Social Links */}
         </footer>
     )

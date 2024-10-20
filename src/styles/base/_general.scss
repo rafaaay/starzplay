@@ -17,4 +17,9 @@ button, .btn {
     background-color: var(--clr-orange);
     color: rgba(var(--clr-white), 1.0);
     font-weight: 500;
+    transition: scale 0.3s ease-in;
+
+    &:hover {
+        scale: 0.95;
+    }
 }

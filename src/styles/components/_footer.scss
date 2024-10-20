@@ -22,4 +22,18 @@
     p {
         color: rgba(var(--clr-white), 0.4);
     }
+
+    &__social-links {
+        display: flex;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        a {
+            cursor: pointer;
+        }
+
+        img {
+            width: 2.4rem;
+        }
+    }
 }
