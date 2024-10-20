@@ -1,5 +1,7 @@
-import React, { useRef } from 'react';
-import Card from "../../atoms/card/card"
+import React, { useRef, Suspense, lazy } from 'react';
+import Skeleton from '../../skeletons/Skeletons';
+
+const Card = lazy(() => import("../../atoms/card/card"));
 
 function Slider( {module} ) {
 
@@ -30,17 +32,31 @@ function Slider( {module} ) {
             </div>
 
             <div className="slider__body">
-                <button className="slider__btn slider__btn--left" aria-label="slide to left" aria-disabled="false" aria-pressed="false" onClick={scrollLeft}>
+                <button 
+                    className="slider__btn slider__btn--left" 
+                    aria-label="slide to left" 
+                    aria-disabled="false" 
+                    aria-pressed="false" 
+                    onClick={scrollLeft}
+                >
                     <img src={'/static/icons/icon_caret-left.svg'} />
                 </button>
 
                 <div className="slider__content" ref={sliderRef}>
                     {module.layoutTitles.titles.map((title) => (
-                        <Card key={title.titleId} title={title} />
+                        <Suspense key={title.titleId} fallback={<Skeleton className="skeleton--card" />}>
+                            <Card key={title.titleId} title={title} />
+                        </Suspense>
                     ))}
                 </div>
 
-                <button className="slider__btn slider__btn--right" aria-label="slide to right" aria-disabled="false" aria-pressed="false" onClick={scrollRight}>
+                <button 
+                    className="slider__btn slider__btn--right" 
+                    aria-label="slide to right" 
+                    aria-disabled="false" 
+                    aria-pressed="false" 
+                    onClick={scrollRight}
+                >
                     <img src={'/static/icons/icon_caret-right.svg'} />
                 </button>
             </div>

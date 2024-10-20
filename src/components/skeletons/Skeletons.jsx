@@ -1,9 +1,6 @@
-const Skeletons = ({ classes }) => {
-
-    const classNames = `skeleton ${classes}`
-
+function Skeleton() {
     return (
-        <div className={classNames}>Skeleton</div>
+        <div className="skeleton"></div>
     )
 }
 
