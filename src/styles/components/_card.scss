@@ -1,9 +1,11 @@
 @use "../abstract" as *;
 
 .card {
-    width: 16vw;
+    --width: 16vw;
+    width: var(--width);
     height: 30rem;
     flex-shrink: 0;
+    transition: width 0.3s ease-in;
     cursor: pointer;
     position: relative;
 
@@ -12,6 +14,8 @@
     }
 
     &:hover {
+        width: calc(var(--width) + 2vw);
+
         img {
             opacity: 0.3;
         }
@@ -28,6 +32,7 @@
         font-size: var(--fs-500);
         white-space: normal;
         opacity: 0;
+        width: calc(var(--width) + 2vw);
     }
 
     img {
